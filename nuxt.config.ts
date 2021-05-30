@@ -161,7 +161,7 @@ export default {
   // 404 ページの設定
   router: {
     // TODO: any 型やめる
-    base: '/github-pages/',
+    base: '/',
     extendRoutes(routes: any, resolve: any) {
       routes.push({
         name: 'custom',
