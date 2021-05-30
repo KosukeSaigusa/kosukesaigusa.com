@@ -1,3 +1,13 @@
+const createSitemapRoutes = async () => {
+  const routes = []
+  const { $content } = require('@nuxt/content')
+  const articles = await $content('news').fetch()
+  for (const article of articles) {
+    routes.push(`news/${article.slug}`)
+  }
+  return routes
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -38,6 +48,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-fontawesome',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics',
   ],
 
   fontawesome: {
@@ -64,4 +76,30 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // 404 ページの設定
+  router: {
+    // TODO: any 型やめる
+    extendRoutes(routes: any, resolve: any) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue'),
+      })
+    },
+  },
+
+  // Google Analytics の設定
+  googleAnalytics: {
+    id: 'UA-132467750-1',
+  },
+
+  // sitemap の生成
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://kosukesaigusa.github.io',
+    // generate: true,
+    exclude: ['/404'],
+    routes: createSitemapRoutes,
+  },
 }
