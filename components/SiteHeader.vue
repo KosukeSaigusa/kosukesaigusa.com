@@ -18,16 +18,17 @@
           class="social-icon pr-2"
           target="_blank"
           rel="noopener"
-          ><font-awesome-icon :icon="['fab', 'github']"
-        /></a>
+        >
+          <font-awesome-icon :icon="['fab', 'github']" />
+        </a>
         <a
           href="https://twitter.com/KosukeSaigusa"
           class="social-icon pr-2"
           target="_blank"
           rel="noopener"
         >
-          <font-awesome-icon :icon="['fab', 'twitter']"
-        /></a>
+          <font-awesome-icon :icon="['fab', 'twitter']" />
+        </a>
       </div>
       <h2 class="site-subtitle">ポートフォリオ、技術・雑記ブログ</h2>
     </div>

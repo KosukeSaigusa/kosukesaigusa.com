@@ -1,6 +1,6 @@
 ---
 title: 'Firestore Security Rules の書き方と守るべき原則'
-description: ''
+description: 'Firestore Security Rules の書き方と守るべき原則についてのまとめ'
 tags: ['Firebase', 'Firestore']
 createdAt: 2020-09-21
 slug: '2020-09-21-firestore-security-rules'

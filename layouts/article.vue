@@ -65,8 +65,16 @@ html {
   @apply font-bold text-xl pt-6 pb-2;
 }
 
+.nuxt-content h4 {
+  @apply font-semibold text-lg pt-6 pb-2;
+}
+
 .nuxt-content p {
   @apply pb-6;
+}
+
+.nuxt-content p em {
+  @apply font-semibold;
 }
 
 .nuxt-content a {

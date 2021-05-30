@@ -1,9 +1,13 @@
 const createSitemapRoutes = async () => {
   const routes = []
   const { $content } = require('@nuxt/content')
-  const articles = await $content('news').fetch()
-  for (const article of articles) {
-    routes.push(`news/${article.slug}`)
+  const techArticles = await $content('tech').fetch()
+  const noteArticles = await $content('note').fetch()
+  for (const article of techArticles) {
+    routes.push(`tech/${article.slug}`)
+  }
+  for (const article of noteArticles) {
+    routes.push(`note/${article.slug}`)
   }
   return routes
 }
@@ -21,9 +25,86 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          '技術・雑記ブログとポートフォリオのサイト。Software Developer, Flutter, Dart, Python, Django, TypeScript, Nuxt.js, Vue.js, Firebase, ...',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Kosuke Saigusa | 技術・雑記ブログ、ポートフォリオ',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: '技術・雑記ブログ、ポートフォリオ',
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:locale',
+        property: 'og:locale',
+        content: 'ja_JP',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://kosukesaigusa.github.io',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          '技術・雑記ブログとポートフォリオのサイト。Software Developer, Flutter, Dart, Python, Django, TypeScript, Nuxt.js, Vue.js, Firebase, ...',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/ogp.jpg',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Kosuke Saigusa | 技術・雑記ブログ、ポートフォリオ',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          '技術・雑記ブログとポートフォリオのサイト。Software Developer, Flutter, Dart, Python, Django, TypeScript, Nuxt.js, Vue.js, Firebase, ...',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/ogp.jpg',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        type: 'image/png',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        type: 'image/png',
+        href: '/favicon-16x16.png',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -60,7 +141,7 @@ export default {
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab'],
+        icons: ['faGithub', 'faTwitter'],
       },
     ],
   },
