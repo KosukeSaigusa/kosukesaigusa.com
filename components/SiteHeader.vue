@@ -11,11 +11,11 @@
     </p>
     <div class="header-text my-auto pl-4">
       <h1 class="site-title font-bold text-lg">Kosuke Saigusa</h1>
+      <h2 class="site-subtitle">ポートフォリオ、技術・雑記ブログ</h2>
       <div class="social-icons flex">
-        <span class="text-gray-600 pr-2">Software developer</span>
         <a
           href="https://github.com/KosukeSaigusa"
-          class="social-icon pr-2"
+          class="social-icon p-2"
           target="_blank"
           rel="noopener"
           aria-label="GitHub のアカウントページ"
@@ -27,7 +27,7 @@
         </a>
         <a
           href="https://twitter.com/KosukeSaigusa"
-          class="social-icon pr-2"
+          class="social-icon p-2"
           target="_blank"
           rel="noopener"
           aria-label="Twitter のアカウントページ"
@@ -38,7 +38,6 @@
           />
         </a>
       </div>
-      <h2 class="site-subtitle">ポートフォリオ、技術・雑記ブログ</h2>
     </div>
   </div>
 </template>

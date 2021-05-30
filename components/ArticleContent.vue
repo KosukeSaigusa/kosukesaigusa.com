@@ -1,7 +1,8 @@
 <template>
   <article>
     <BreadCrumbList :title="article.title" :dir="article.dir" />
-    <div class="article-header pb-6">
+    <hr class="my-4" />
+    <div class="article-header">
       <h2 class="font-bold text-2xl py-1">
         {{ article.title || '' }}
       </h2>
@@ -11,6 +12,7 @@
         }})</span
       >
     </div>
+    <hr class="mt-6" />
     <nuxt-content :document="article" />
   </article>
 </template>
