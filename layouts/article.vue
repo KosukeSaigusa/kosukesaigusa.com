@@ -13,8 +13,7 @@
         lg:max-w-screen-md
       "
     >
-      <SiteHeader />
-      <div class="content-container rounded-lg p-4 bg-gray-100">
+      <div class="p-4">
         <Nuxt />
       </div>
     </div>
@@ -25,22 +24,19 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import SiteNavigation from '~/components/SiteNavigation.vue'
-import SiteHeader from '~/components/SiteHeader.vue'
 import SiteFotter from '~/components/SiteFooter.vue'
 
 @Component({
   scrollToTop: true,
-  layout: 'default',
   components: {
     SiteNavigation,
-    SiteHeader,
     SiteFotter,
   },
 })
 export default class extends Vue {}
 </script>
 
-<style>
+<style lang="postcss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -62,42 +58,50 @@ html {
 
 * {
   color: #222222;
+  line-height: 1.9;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.nuxt-content h3 {
+  @apply font-bold text-xl pt-6 pb-2;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.nuxt-content p {
+  @apply pb-6;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.nuxt-content a {
+  @apply text-blue-600 hover:underline;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.nuxt-content ul,
+ol {
+  @apply pl-6 pb-4;
 }
 
-.content-category-item a {
-  color: #2c3e50;
+.nuxt-content li {
+  @apply list-disc py-1;
 }
 
-.content-category-item a.nuxt-link-exact-active {
-  color: #42b983;
+.nuxt-content p code {
+  @apply p-1 rounded-md;
+  background-color: rgba(33, 90, 160, 0.07);
+}
+
+.nuxt-content li code {
+  @apply p-1 rounded-md;
+  background-color: rgba(33, 90, 160, 0.07);
+}
+
+.nuxt-content div {
+  @apply mb-6;
+}
+
+.nuxt-content pre {
+  @apply m-0 rounded-lg;
+  background-color: rgba(33, 90, 160, 0.07);
+}
+
+.nuxt-content pre code {
+  /* @apply text-white; */
 }
 </style>
