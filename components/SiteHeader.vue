@@ -18,16 +18,24 @@
           class="social-icon pr-2"
           target="_blank"
           rel="noopener"
+          aria-label="GitHub のアカウントページ"
         >
-          <font-awesome-icon :icon="['fab', 'github']" />
+          <font-awesome-icon
+            :icon="['fab', 'github']"
+            style="font-size: 24px"
+          />
         </a>
         <a
           href="https://twitter.com/KosukeSaigusa"
           class="social-icon pr-2"
           target="_blank"
           rel="noopener"
+          aria-label="Twitter のアカウントページ"
         >
-          <font-awesome-icon :icon="['fab', 'twitter']" />
+          <font-awesome-icon
+            :icon="['fab', 'twitter']"
+            style="font-size: 24px"
+          />
         </a>
       </div>
       <h2 class="site-subtitle">ポートフォリオ、技術・雑記ブログ</h2>

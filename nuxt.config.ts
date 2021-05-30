@@ -171,9 +171,9 @@ export default {
   },
 
   // Google Analytics の設定
-  googleAnalytics: {
-    id: 'UA-132467750-1',
-  },
+  // googleAnalytics: {
+  //   id: 'UA-132467750-1',
+  // },
 
   // sitemap の生成
   sitemap: {
