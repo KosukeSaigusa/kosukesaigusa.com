@@ -2,7 +2,9 @@
   <div class="header-container flex py-2 mb-4">
     <p class="header-image my-auto">
       <img
-        class="mx-auto rounded-full h-16 w-16"
+        width="124"
+        height="128"
+        class="mx-auto rounded-full"
         src="/image/profile.webp"
         alt="Kosuke Saigusa"
       />
