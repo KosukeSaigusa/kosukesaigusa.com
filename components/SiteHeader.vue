@@ -2,8 +2,8 @@
   <div class="header-container flex py-2 mb-4">
     <p class="header-image my-auto">
       <img
-        width="124"
-        height="128"
+        width="62"
+        height="64"
         class="mx-auto rounded-full"
         src="/image/profile.webp"
         alt="Kosuke Saigusa"
