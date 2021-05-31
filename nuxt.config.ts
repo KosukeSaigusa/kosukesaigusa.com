@@ -130,7 +130,7 @@ export default {
     '@nuxt/content',
     'nuxt-fontawesome',
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm',
   ],
 
   fontawesome: {
@@ -171,9 +171,9 @@ export default {
   },
 
   // Google Analytics の設定
-  // googleAnalytics: {
-  //   id: 'UA-132467750-1',
-  // },
+  gtm: {
+    id: 'GTM-N6XKFP4',
+  },
 
   // sitemap の生成
   sitemap: {

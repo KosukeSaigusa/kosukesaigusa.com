@@ -2,8 +2,6 @@
   <div class="header-container flex py-2 mb-4">
     <p class="header-image my-auto">
       <img
-        width="288"
-        height="288"
         class="mx-auto rounded-full h-16 w-16"
         src="/image/profile.webp"
         alt="Kosuke Saigusa"
@@ -20,10 +18,7 @@
           rel="noopener"
           aria-label="GitHub のアカウントページ"
         >
-          <font-awesome-icon
-            :icon="['fab', 'github']"
-            style="font-size: 24px"
-          />
+          <font-awesome-icon class="text-2xl" :icon="['fab', 'github']" />
         </a>
         <a
           href="https://twitter.com/KosukeSaigusa"
@@ -32,10 +27,7 @@
           rel="noopener"
           aria-label="Twitter のアカウントページ"
         >
-          <font-awesome-icon
-            :icon="['fab', 'twitter']"
-            style="font-size: 24px"
-          />
+          <font-awesome-icon class="text-2xl" :icon="['fab', 'twitter']" />
         </a>
       </div>
     </div>
