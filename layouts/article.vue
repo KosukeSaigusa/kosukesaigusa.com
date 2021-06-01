@@ -88,4 +88,12 @@ ol {
 .nuxt-content pre code {
   /* @apply text-white; */
 }
+
+.nuxt-content blockquote {
+  @apply pb-6;
+}
+
+.nuxt-content blockquote p {
+  @apply pl-4 py-0 italic border-l-4;
+}
 </style>

@@ -6,7 +6,13 @@
           japaneseDayOfWeek(article.createdAt)
         }})
       </p>
-      <p class="title font-bold">{{ article.title }}</p>
+      <p class="title font-bold">
+        <nuxt-link
+          :to="articlePath(article.dir, article.slug)"
+          class="hover:underline hover:text-blue-700"
+          >{{ article.title }}</nuxt-link
+        >
+      </p>
       <div
         v-if="
           article.tags === null || article.tags === undefined
@@ -46,6 +52,11 @@ export default class extends Vue {
   //   }
   //   return this.article.tags.length > 0
   // }
+
+  // TODO: 後で dir の型を作って列挙型のようにする
+  articlePath(dir: string, slug: string): string {
+    return dir + '/' + slug
+  }
 
   get formatDate() {
     return formatDate

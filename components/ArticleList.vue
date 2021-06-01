@@ -2,9 +2,7 @@
   <div>
     <ul class="articles divide-y">
       <li v-for="(article, index) in articles" :key="index">
-        <nuxt-link :to="articlePath(article.dir, article.slug)"
-          ><Article :article="article"
-        /></nuxt-link>
+        <Article :article="article" />
       </li>
     </ul>
   </div>
@@ -26,10 +24,5 @@ export default class extends Vue {
     required: true,
   })
   articles!: any[]
-
-  // TODO: 後で dir の型を作って列挙型のようにする
-  articlePath(dir: string, slug: string): string {
-    return dir + '/' + slug
-  }
 }
 </script>

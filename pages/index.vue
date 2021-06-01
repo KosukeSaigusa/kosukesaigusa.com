@@ -8,12 +8,14 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import PostCategoryTabs from '~/components/PostCategoryTabs.vue'
+import ArticleList from '~/components/ArticleList.vue'
 
 @Component({
   scrollToTop: true,
   layout: 'default',
   components: {
     PostCategoryTabs,
+    ArticleList,
   },
 })
 export default class extends Vue {
