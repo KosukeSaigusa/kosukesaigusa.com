@@ -1,5 +1,5 @@
 ---
-title: 'N + 1 問題'
+title: 'Django ORM で N + 1 問題 を回避する'
 description: 'N + 1 問題についてのメモと Django の ORM でそれを回避する方法'
 tags: ['SQL', 'Django', 'Python']
 createdAt: 2021-06-01
