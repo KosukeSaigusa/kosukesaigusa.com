@@ -59,8 +59,8 @@ imports の中の `@fortawesome/free-solid-svg-icons` や `@fortawesome/free-sol
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
-  },
+    "@fortawesome/vue-fontawesome": "^2.0.2"
+  }
 }
 ```
 
