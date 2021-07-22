@@ -3,11 +3,20 @@
     <ArticleContent :article="article" />
     <div class="flex gap-x-4 md:gap-x-8">
       <div class="flex-1">
-        <div v-if="next != null"><NextArticle :next="next" /></div>
+        <NextPreviousArticle
+          v-if="next !== null"
+          :next-or-previous="'next'"
+          :title="next.title"
+          :path="next.path"
+        />
       </div>
       <div class="flex-1">
-        <div v-if="previous != null">
-          <PreviousArticle :previous="previous" />
+        <div v-if="previous !== null">
+          <NextPreviousArticle
+            :next-or-previous="'previous'"
+            :title="previous.title"
+            :path="previous.path"
+          />
         </div>
       </div>
     </div>
@@ -18,8 +27,7 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import BreadCrumbList from '~/components/BreadCrumbList.vue'
 import ArticleConent from '~/components/ArticleContent.vue'
-import NextArticle from '~/components/NextArticle.vue'
-import PreviousArticle from '~/components/PreviousArticle.vue'
+import NextPreviousArticle from '~/components/NextPreviousArticle.vue'
 
 @Component({
   scrollToTop: true,
@@ -27,8 +35,7 @@ import PreviousArticle from '~/components/PreviousArticle.vue'
   components: {
     BreadCrumbList,
     ArticleConent,
-    NextArticle,
-    PreviousArticle,
+    NextPreviousArticle,
   },
 })
 export default class extends Vue {
@@ -37,7 +44,7 @@ export default class extends Vue {
     const article = await query.fetch()
 
     const [previous, next] = await $content('tech')
-      .only(['title', 'slug'])
+      .only(['title', 'slug', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()

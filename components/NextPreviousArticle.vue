@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="bg-white shadow-lg rounded-lg p-4">
-      <p class="font-bold">前の投稿</p>
+      <p class="font-bold">
+        {{ nextOrPrevious === 'next' ? '次' : '前' }}の投稿
+      </p>
       <p class="hover:underline hover:text-blue-700">
-        <nuxt-link :to="previous.path">{{ previous.title }}</nuxt-link>
+        <nuxt-link :to="path">{{ title }}</nuxt-link>
       </p>
     </div>
   </div>
@@ -18,11 +20,23 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
   components: {},
 })
 export default class extends Vue {
-  // TODO: 後で previous/next の型にする
+  // TODO: next or previous の enum か interface を作る
   @Prop({
-    type: Object,
+    type: String,
     required: true,
   })
-  previous!: object
+  nextOrPrevious!: object
+
+  @Prop({
+    type: String,
+    required: true,
+  })
+  title!: object
+
+  @Prop({
+    type: String,
+    required: true,
+  })
+  path!: object
 }
 </script>
