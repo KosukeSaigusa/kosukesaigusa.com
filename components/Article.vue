@@ -19,6 +19,7 @@
             ? false
             : article.tags.length
         "
+        class="flex flex-row"
       >
         <TagPills :tags="article.tags" />
       </div>

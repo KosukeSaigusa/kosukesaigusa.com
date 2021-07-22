@@ -1,11 +1,10 @@
 <template>
-  <div class="tags flex">
+  <div class="tags">
     <span
       v-for="(tag, index) in tags"
       :key="index"
       class="
         text-xs
-        inline-flex
         items-center
         font-bold
         leading-sm

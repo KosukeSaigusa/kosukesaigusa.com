@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <div><SiteNavigation class="px-8 mb-4" /></div>
     <div
       class="
         container
@@ -13,12 +12,13 @@
         lg:max-w-screen-md
       "
     >
+      <SiteNavigation />
       <SiteHeader />
       <div class="content-container rounded-lg p-4 bg-gray-100">
         <Nuxt />
       </div>
     </div>
-    <div><SiteFooter class="px-8" /></div>
+    <SiteFooter />
   </div>
 </template>
 
