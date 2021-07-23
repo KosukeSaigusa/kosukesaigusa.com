@@ -122,6 +122,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt-hero-icons/outline/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
